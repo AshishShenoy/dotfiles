@@ -3,6 +3,7 @@ alias sudo='sudo '
 
 # Replacements and aliases for built-in programs
 alias ls='exa --group-directories-first '
+alias cat='bat '
 
 # Convenience aliases
 alias ll='ls -lh'
