@@ -1,0 +1,21 @@
+# Security functions
+function md5checksum () {
+	if [[ "$(md5sum $1 | awk '{print $1}')" == "$2" ]]; then
+		echo "Checksum matches!"
+	else
+		echo "Checksum does not match!"
+	fi
+}
+
+function sha1checksum () {
+	if [[ "$(sha1sum $1 | awk '{print $1}')" == "$2" ]]; then
+		echo "Checksum matches!"
+	else
+		echo "Checksum does not match!"
+	fi
+}
+
+# Convenience Functions
+function open () {
+	xdg-open $1 &> /dev/null
+}
