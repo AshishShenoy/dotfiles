@@ -1,3 +1,3 @@
 #!/bin/bash
 
-stow bash git vim zsh
+stow bash git vim zsh mpv
