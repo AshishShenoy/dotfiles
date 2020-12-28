@@ -1,0 +1,80 @@
+{
+    //    ***** Text, Editing and Display Configuration *****
+
+    "editor.fontSize": 14,
+    "editor.fontFamily": "'Fira Code', 'Hack', monospace",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "editor.dragAndDrop": false,
+    "window.zoomLevel": 0,
+
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.settings.editor": "json",
+    "workbench.settings.useSplitJSON": true,
+
+    "terminal.integrated.fontFamily": "Noto Sans Mono",
+    "terminal.integrated.fontSize": 14,
+
+    "explorer.autoReveal": false,
+    "explorer.confirmDelete": false,
+
+    "files.autoSave": "afterDelay",
+    "better-comments.multilineComments": false,
+
+    //    ***** Formatting, Linting and Intellisense Configuration *****
+
+    // Editor
+    "editor.formatOnSave": true,
+    "editor.suggestSelection": "first",
+
+    // C / C++
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 100 }",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+
+    // CSS
+    "css.lint.boxModel": "warning",
+    "css.lint.duplicateProperties": "warning",
+    "css.lint.float": "warning",
+
+    // Python
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["-l 120"],
+
+    // JavaScript
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 120,
+    "prettier.arrowParens": "avoid",
+
+    // Configuration files
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    //   ***** Debug and Launch Configuration *****
+
+    "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "jupyter.askForKernelRestart": false,
+
+    //    ***** Version Control *****
+
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+
+    //    ***** Turn off annoyances *****
+
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.accessibilitySupport": "off",
+    "explorer.confirmDragAndDrop": false,
+    "vsicons.dontShowNewVersionMessage": true,
+
+    //    ***** Other Configuration *****
+
+    "files.enableTrash": false
+}
