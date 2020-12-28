@@ -123,6 +123,7 @@ plugins=(
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 )
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
 # User configuration
 

@@ -25,7 +25,6 @@ alias pat="sudo powertop --auto-tune &> /dev/null"
 # Development 
 alias pyserver='python3 -m http.server'
 alias mgd='mongod --dbpath=data --quiet --syslog --bind_ip=127.0.0.1 --port=27017 &'
-alias code='code-oss '
 
 # Git aliases
 alias gs='git status'
@@ -33,7 +32,7 @@ alias gl='git lg'
 
 # Network
 alias ip-nat='hostname -i'
-alias ip-public='wget -qO- http://ipecho.net/plain | xargs echo'
+alias ip-public='curl -4 ifconfig.co'
 alias ping='ping -c 5'
 alias wget='wget -c '
 
@@ -48,4 +47,4 @@ alias vifn='vim ~/.zsh_functions'
 alias viex='vim ~/.zsh_exports'
 
 # Fun Ztuff
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias rr='curl -s -L http://bit.ly/10hA8iC | bash'

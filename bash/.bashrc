@@ -135,4 +135,11 @@ ex ()
 ##########		USER CONFIGURATION		##########
 
 # Since I only use bash from within VSCode, a special prompt.
-PS1='\[\033[01;32m\]\w\[\033[00m\] -> '
+PS1='\[\033[01;32m\]\W\[\033[00m\] -> '
+
+# Expand the history size.
+export HISTFILESIZE=10000
+export HISTSIZE=500
+
+# Don't put duplicate lines in the history and do not add lines that start with a space
+export HISTCONTROL=erasedups:ignoredups:ignorespace

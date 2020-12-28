@@ -19,3 +19,5 @@
 
 [pager]
 	log = false
+[credential]
+	helper = cache
