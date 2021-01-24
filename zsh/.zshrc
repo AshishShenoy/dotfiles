@@ -122,6 +122,7 @@ plugins=(
 	git
 	zsh-syntax-highlighting
 	zsh-autosuggestions
+	wd
 )
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 

@@ -4,6 +4,7 @@ The programs whose dotfiles I'm currently tracking are:
 
 - bash
 - zsh
+- alacritty
 - vim
 - git
 - mpv

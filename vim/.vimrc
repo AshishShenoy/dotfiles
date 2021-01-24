@@ -68,7 +68,7 @@ set noshowmode
 set ttimeoutlen=50
 
 " Change the colorscheme of lightline
-let g:lightline = { 'colorscheme': 'one', }
+let g:lightline = { 'colorscheme': 'wombat', }
 
 " Install plugins in the specified directory.
 call plug#begin('~/.vim/plugged')
@@ -86,3 +86,5 @@ call plug#end()
 " Enable vim-rainbow for all files.
 let g:rainbow_active = 1
 
+""""" SHORTCUTS """""
+nnoremap <C-n> :NERDTreeToggle<CR>
