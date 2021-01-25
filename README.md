@@ -1,5 +1,9 @@
 # Dotfiles (Ashish Shenoy)
 
+[![forthebadge](https://forthebadge.com/images/badges/ctrl-c-ctrl-v.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-black-magic.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-resentment.svg)](https://forthebadge.com)
+
 The programs whose dotfiles I'm currently tracking are:
 
 - bash
