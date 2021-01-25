@@ -1,0 +1,26 @@
+super + Return
+	alacritty
+
+super + v
+	code
+
+super + b
+	firefox
+
+super + e
+	dolphin
+
+super + t
+	teams
+
+super + c
+	galculator
+
+super + d
+	discord
+
+super + m
+	rhythmbox
+
+Print
+	flameshot gui
