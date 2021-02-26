@@ -1,13 +1,12 @@
 {
     //    ***** Text, Editing and Display Configuration *****
 
-    "editor.fontSize": 14,
+    "editor.fontSize": 16,
     "editor.fontFamily": "'Fira Code', 'Hack', monospace",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "editor.wordWrap": "on",
     "editor.dragAndDrop": false,
-    "window.zoomLevel": 0,
 
     "workbench.colorTheme": "GitHub Dark",
     "workbench.iconTheme": "vscode-icons",
@@ -76,5 +75,9 @@
 
     //    ***** Other Configuration *****
 
-    "files.enableTrash": false
+    "files.enableTrash": false,
+
+    "keyboard.dispatch": "keyCode",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": false
 }

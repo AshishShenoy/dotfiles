@@ -4,6 +4,8 @@ alias sudo='sudo '
 # Replacements and aliases for built-in programs
 alias ls='exa --group-directories-first '
 alias cat='bat '
+alias traceroute='mtr '
+alias vim='nvim '
 
 # Convenience aliases
 alias ll='ls -lh'
@@ -15,12 +17,12 @@ alias cp='cp -i'
 
 # Package Management
 alias pacman-autoremove='sudo pacman -Rns $(pacman -Qdtq)'
+alias pacman-clean-cache='sudo pacman -Scc'
+alias pacman-sort-packages-by-size="LC_ALL=C pacman -Qi | awk '/^Name/{name=\$3} /^Installed Size/{print \$4\$5, name}' | sort -h"
 
 # System Resources 
 alias free='free -m'
 alias storage='pydf -h / /home /run/media/ashish/Acer /run/media/ashish/Data'
-alias battery="watch sudo tlp-stat -b"
-alias pat="sudo powertop --auto-tune &> /dev/null"
 
 # Development 
 alias pyserver='python3 -m http.server'
