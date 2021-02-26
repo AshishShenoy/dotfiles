@@ -10,8 +10,8 @@ The programs whose dotfiles I'm currently tracking are:
 - bash
 - git
 - mpv
+- neovim
 - sxhkd
-- vim
 - vscode
 - zsh
 
