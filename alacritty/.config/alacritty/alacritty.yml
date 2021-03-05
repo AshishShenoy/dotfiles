@@ -69,7 +69,7 @@ font:
     #
     # Default:
     #   - (Linux/BSD) monospace
-    family: Source Code Pro for Powerline
+    family: SauceCodePro Nerd Font Mono
     style: Medium
 
   # Bold font face

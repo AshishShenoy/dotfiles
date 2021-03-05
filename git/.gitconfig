@@ -20,4 +20,4 @@
 [pager]
 	log = false
 [credential]
-	helper = cache
+	helper = store

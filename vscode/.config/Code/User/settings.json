@@ -1,7 +1,7 @@
 {
     //    ***** Text, Editing and Display Configuration *****
 
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     "editor.fontFamily": "'Fira Code', 'Hack', monospace",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,

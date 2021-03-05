@@ -15,15 +15,29 @@ set number
 " down.
 set relativenumber
 
+" Set vim colorscheme
+colorscheme gruvbox
+
 " This setting makes search case-insensitive when all characters in the string
 " being searched are lowercase. However, the search becomes case-sensitive if
 " it contains any capital letters. This makes searching more convenient.
 set ignorecase
 set smartcase
 
-"" Change the leader key from default '/' to ','.
+" Change the leader key from default '/' to ','.
 let mapleader=','
 
+" Disable the swap file.
+set noswapfile
+
+" Automatically change the directory to the file in the current buffer.
+set autochdir
+
+" Turn on the filetype plugin for filetype specific actionso
+filetype plugin on
+
+" Unify vim and OS clipboard.
+set clipboard=unnamedplus
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " => Splits
@@ -54,7 +68,7 @@ highlight VertSplit cterm=NONE
 " => Integrated Terminal
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Open terminal in a new vertical split.
-noremap <silent> <Leader>tt :40vnew term://zsh<CR>
+noremap <silent> <Leader>tt :40vnew term://bash<CR>
 
 " Disable line numbers in integrated terminal.
 augroup TerminalStuff
@@ -107,6 +121,13 @@ set shiftwidth=4
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => Other Shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"" Shortcut to toggle NERDTree.
-nnoremap <C-n> :NERDTreeToggle<CR>
+" Remaps of keybinds to move viewport up and down.
+nnoremap <S-k> 3<C-y>
+nnoremap <S-j> 3<C-e>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Other settings
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Change syntax highlighting of Bison files to C.
+au BufNewFile,BufRead,BufReadPost *.y set syntax=c
