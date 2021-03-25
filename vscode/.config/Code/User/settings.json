@@ -38,6 +38,7 @@
     "css.lint.float": "warning",
 
     // Python
+    "python.languageServer": "Pylance",
     "python.formatting.provider": "black",
     "python.formatting.blackArgs": ["-l 120"],
 

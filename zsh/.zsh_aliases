@@ -6,14 +6,14 @@ alias ls='exa --group-directories-first '
 alias cat='bat '
 alias traceroute='mtr '
 alias vim='nvim '
+alias cp="rsync --versbose --archive --compress --progress "
 
 # Convenience aliases
 alias ll='ls -lh'
 alias la='ls -lah'
 alias l.='ls -lah | egrep "^\."'
-
-# Prevent dangerous commands from silently running
-alias cp='cp -i'
+alias free='free -m'
+alias df='df -h'
 
 # Package Management
 alias pacman-autoremove='sudo pacman -Rns $(pacman -Qdtq)'
@@ -21,7 +21,6 @@ alias pacman-clean-cache='sudo pacman -Scc'
 alias pacman-sort-packages-by-size="LC_ALL=C pacman -Qi | awk '/^Name/{name=\$3} /^Installed Size/{print \$4\$5, name}' | sort -h"
 
 # System Resources 
-alias free='free -m'
 alias storage='pydf -h / /home /run/media/ashish/Acer /run/media/ashish/Data'
 
 # Development 
@@ -42,11 +41,13 @@ alias wget='wget -c '
 alias cclip='xclip -selection clipboard'
 alias cpaste='xclip -selection clipboard -o'
 
-# Zsh Configurations
+# Configuration Files
 alias virc='vim ~/.zshrc'
 alias vial='vim ~/.zsh_aliases'
-alias vifn='vim ~/.zsh_functions'
-alias viex='vim ~/.zsh_exports'
+alias vinv='vim ~/.config/nvim/init.vim'
 
 # Fun Ztuff
 alias rr='curl -s -L http://bit.ly/10hA8iC | bash'
+alias yoink='sudo pacman -S '
+alias yeet='sudo pacman -Rns '
+

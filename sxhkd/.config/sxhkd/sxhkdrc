@@ -13,14 +13,11 @@ super + e
 super + t
 	teams
 
-super + c
-	galculator
-
 super + d
 	discord
 
 super + m
 	rhythmbox
 
-Print
+super + f
 	flameshot gui

@@ -1,47 +1,38 @@
-" Load plugins and their configurations.
-source ~/.config/nvim/plugins.vim
-
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => Core Experience
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Show line numbers.
-set number
+set number relativenumber
+set noswapfile
 
-" This enables relative line numbering mode. With both number and
-" relativenumber enabled, the current line shows the true line number, while
-" all other lines (above and below) are numbered relative to the current line.
-" This is useful because you can tell, at a glance, what count is needed to
-" jump up or down to a particular line, by {count}k to go up or {count}j to go
-" down.
-set relativenumber
+" Set height of command pane.
+let cmdheight = 1
 
-" Set vim colorscheme
-colorscheme gruvbox
+" Highlight the current line.
+set cursorline
 
-" This setting makes search case-insensitive when all characters in the string
-" being searched are lowercase. However, the search becomes case-sensitive if
-" it contains any capital letters. This makes searching more convenient.
-set ignorecase
-set smartcase
+" Emable case insensitive searching, except for searches with uppercase
+" characters.
+set ignorecase smartcase
 
 " Change the leader key from default '/' to ','.
-let mapleader=','
-
-" Disable the swap file.
-set noswapfile
+let mapleader = ','
 
 " Automatically change the directory to the file in the current buffer.
 set autochdir
 
-" Turn on the filetype plugin for filetype specific actionso
+" Turn on the filetype plugin for filetype specific actions.
 filetype plugin on
 
 " Unify vim and OS clipboard.
 set clipboard=unnamedplus
 
+" Always display the sign column.
+set signcolumn=yes
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""
 " => Splits
-""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""
 " Change default positions of new splits to below(horiz) and right(vert).
 set splitbelow splitright
 
@@ -64,11 +55,12 @@ map <Leader>th <C-w>t<C-w>K
 " Make the split border transparent.
 highlight VertSplit cterm=NONE
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => Integrated Terminal
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Open terminal in a new vertical split.
-noremap <silent> <Leader>tt :40vnew term://bash<CR>
+noremap <silent> <Leader>tt :50vnew term://bash<CR>
 
 " Disable line numbers in integrated terminal.
 augroup TerminalStuff
@@ -87,7 +79,6 @@ tnoremap <Esc> <C-\><C-n>
 if !isdirectory($HOME . "/.local/share/nvim/undodir")
 	call mkdir($HOME . "/.local/share/nvim/undodir", "p")
 endif
-
 set undofile
 set undodir=~/.local/share/nvim/undodir
 
@@ -125,9 +116,20 @@ set shiftwidth=4
 nnoremap <S-k> 3<C-y>
 nnoremap <S-j> 3<C-e>
 
+" Reload vim with the current configuration.
+nnoremap <silent> <Leader>rv :source ~/.config/nvim/init.vim<CR>
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => Other settings
 """"""""""""""""""""""""""""""""""""""""""""""""""
-
 " Change syntax highlighting of Bison files to C.
 au BufNewFile,BufRead,BufReadPost *.y set syntax=c
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Load plugins and their configurations.
+source ~/.config/nvim/plugins.vim
+

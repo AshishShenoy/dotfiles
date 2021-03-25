@@ -21,15 +21,16 @@ SPACESHIP_PROMPT_ORDER=(
   dir           # Current directory section
   git           # Git section (git_branch + git_status)
   package       # Package version
+  venv          # virtualenv section
   node          # Node.js section
-  ruby          # Ruby section
+  docker        # Docker section
   line_sep      # Line break
-  battery       # Battery level and status
-  vi_mode       # Vi-mode indicator
   jobs          # Background jobs indicator
   exit_code     # Exit code section
   char          # Prompt character
-  venv          # virtualenv section
+#  battery       # Battery level and status
+#  ruby          # Ruby section
+#  vi_mode       # Vi-mode indicator
 #  elixir        # Elixir section
 #  xcode         # Xcode section
 #  swift         # Swift section
@@ -38,10 +39,9 @@ SPACESHIP_PROMPT_ORDER=(
 #  rust          # Rust section
 #  haskell       # Haskell Stack section
 #  julia         # Julia section
-  docker        # Docker section
 #  aws           # Amazon Web Services section
 #  conda         # conda virtualenv section
-  pyenv         # Pyenv section
+#  pyenv         # Pyenv section
 #  dotnet        # .NET section
 #  ember         # Ember.js section
 #  kubecontext   # Kubectl context section
@@ -50,15 +50,19 @@ SPACESHIP_PROMPT_ORDER=(
 #  exec_time     # Execution time
 )
 
-SPACESHIP_CHAR_SYMBOL="-> "
-SPACESHIP_USER_SHOW=always
-SPACESHIP_HOST_SHOW=always
 SPACESHIP_USER_COLOR=226
-SPACESHIP_USER_PREFIX=" ."
 SPACESHIP_HOST_COLOR=208
 SPACESHIP_DIR_COLOR=046
 SPACESHIP_GIT_BRANCH_COLOR=069
+
+SPACESHIP_USER_SHOW=always
+SPACESHIP_HOST_SHOW=always
 SPACESHIP_DIR_TRUNC_REPO=false
+
+SPACESHIP_CHAR_SYMBOL="-> "
+SPACESHIP_USER_PREFIX=" ."
+SPACESHIP_DOCKER_PREFIX="using "
+SPACESHIP_VENV_PREFIX="inside 🐍 "
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -95,7 +99,7 @@ SPACESHIP_DIR_TRUNC_REPO=false
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -139,7 +143,7 @@ source ~/.zsh_functions
 # export LANG=en_US.UTF-8
 
 # Export preferred editor.
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

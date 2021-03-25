@@ -5,10 +5,6 @@
 	# Enable colors in color-supporting terminals
 	ui = auto
 [alias]
-	st = status
-	co = checkout
-	c = "!git add -A && git commit -m "
-
 	# Done this way as git aliases don't support multiple commands
 	# And doesn't add a newline at the end of the last log fstring
 	# So the echo command which prints a newline by default is used.
@@ -17,7 +13,21 @@
 		echo ''; \
 		}; lg"
 
+    # Unstage a file using 'git unstage file'.
+	unstage = reset HEAD --
+
+    # View the last commit.
+	last = log -1 HEAD
+
 [pager]
 	log = false
 [credential]
 	helper = store
+[init]
+	defaultBranch = master
+[diff]
+	tool = nvimdiff
+[core]
+	editor = nvim
+[pull]
+	rebase = false
