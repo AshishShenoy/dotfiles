@@ -6,7 +6,7 @@ alias ls='exa --group-directories-first '
 alias cat='bat '
 alias traceroute='mtr '
 alias vim='nvim '
-alias cp="rsync --versbose --archive --compress --progress "
+alias cp="rsync --verbose --archive --compress --progress "
 
 # Convenience aliases
 alias ll='ls -lh'

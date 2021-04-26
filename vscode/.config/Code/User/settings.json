@@ -8,7 +8,7 @@
     "editor.wordWrap": "on",
     "editor.dragAndDrop": false,
 
-    "workbench.colorTheme": "GitHub Dark",
+    "workbench.colorTheme": "GitHub Dark Default",
     "workbench.iconTheme": "vscode-icons",
     "workbench.settings.editor": "json",
     "workbench.settings.useSplitJSON": true,
@@ -80,5 +80,11 @@
 
     "keyboard.dispatch": "keyCode",
     "diffEditor.ignoreTrimWhitespace": false,
-    "diffEditor.renderSideBySide": false
+    "diffEditor.renderSideBySide": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
 }

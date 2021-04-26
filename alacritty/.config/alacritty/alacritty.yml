@@ -78,7 +78,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Source Code Pro for Powerline
+    family: SauceCodePro Nerd Font Mono
     style: Medium
 
   # Italic font face
@@ -87,7 +87,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Source Code Pro for Powerline
+    family: SauceCodePro Nerd Font Mono
     style: Italic
 
   # Bold italic font face
@@ -96,7 +96,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Source Code Pro for Powerline
+    family: SauceCodePro Nerd Font Mono
     style: Bold Italic
 
   # Point size

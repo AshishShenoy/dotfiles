@@ -200,11 +200,10 @@ let g:NERDTreeWinSize = 30
 " Change sonokai style.
 let g:sonokai_style='atlantis'
 
+colorscheme sonokai
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => GRUVBOX
-""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme gruvbox
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
