@@ -1,3 +1,7 @@
+# Reload sxhkdrc
+super + shift + r
+        pkill -usr1 -x sxhkd && notify-send 'sxhkd' 'Reloaded config'
+
 super + Return
 	alacritty
 
@@ -11,13 +15,16 @@ super + e
 	dolphin
 
 super + t
-	teams
+        source ~/.config/sxhkd/scripts/ocr.sh
 
 super + d
 	discord
 
 super + m
 	rhythmbox
+
+super + s
+	spotify
 
 super + f
 	flameshot gui
