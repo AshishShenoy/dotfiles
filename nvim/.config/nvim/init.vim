@@ -4,9 +4,6 @@
 set number relativenumber
 set noswapfile
 
-" Set height of command pane.
-let cmdheight = 1
-
 " Highlight the current line.
 set cursorline
 
