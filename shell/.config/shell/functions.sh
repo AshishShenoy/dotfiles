@@ -24,30 +24,6 @@ function open () {
 	xdg-open $1 &> /dev/null
 }
 
-# Extracts file based on the file extension
-function ext () {
-	if [[ -f $1 ]] || [[ -z $1(#qN) ]] ; then
-		local ext_path=$(dirname $1)
-		case $1 in
-			*.tar.bz2)   tar xjf $1 -C $ext_path    ;;
-			*.tar.gz)    tar xzf $1 -C $ext_path    ;;
-			*.tar.xz)    tar xf $1 -C $ext_path   ;;
-			*.bz2)       bunzip2 $1            ;;
-			*.rar)       unrar x $1 $ext_path      ;;
-			*.gz)        gunzip $1             ;;
-			*.tar)       tar xf $1 -C $ext_path    ;;
-			*.tbz2)      tar xjf $1 -C $ext_path    ;;
-			*.tgz)       tar xzf $1 -C $ext_path    ;;
-			*.zip)       unzip $1 -d $ext_path     ;;
-			*.Z)         uncompress $1         ;;
-			*.7z)        7z x $1 -o $ext_path      ;;
-			*)           echo "'$1' cannot be extracted via ext()" ;;
-		esac
-	else
-		echo "'$1' is not a valid file"
-	fi
-}
-
 # Returns current power consumption in watts
 function check-power () {
 	echo - | awk "{printf \"%.1f\", \
@@ -59,7 +35,7 @@ function check-power () {
 
 # CLI wrapper for ix.io, an online text hosting platform
 # Reads data from argument, or from stdin
-ix() {
+function ix() {
 	curl=$(command -v curl)
 	[ -f "$HOME/.netrc" ] && curl="${curl} --netrc"
 

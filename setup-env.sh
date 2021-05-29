@@ -1,3 +1,3 @@
 #!/bin/bash
 
-stow alacritty bash git mpv nvim sxhkd vscode zsh
+stow alacritty bash git mpv nvim shell sxhkd vscode zsh

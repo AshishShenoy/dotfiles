@@ -40,6 +40,9 @@ call plug#begin('~/.local/share/nvim/plugged')
         " Comment functions so powerful—no comment necessary.
         Plug 'preservim/nerdcommenter'
 
+        " Expand emmet abbreviations.
+        Plug 'mattn/emmet-vim'
+
         " JavaScript bundle, provides syntax highlighting.
         Plug 'pangloss/vim-javascript'
 
@@ -61,8 +64,8 @@ let g:lightline = { 'colorscheme': 'one', }
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM-RAINBOW
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Enable vim-rainbow for all files.
-let g:rainbow_active = 1
+" Enable vim-rainbow for certain filetypes.
+au FileType c,cpp,javascript,typescript,python call rainbow#load()
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""

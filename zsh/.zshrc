@@ -131,11 +131,12 @@ plugins=(
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
 # User configuration
+export SHELL_CONFIG="/home/ashish/.config/shell"
 
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh_aliases
-source ~/.zsh_exports
-source ~/.zsh_functions
+source $SHELL_CONFIG/aliases.sh
+source $SHELL_CONFIG/exports.sh
+source $SHELL_CONFIG/functions.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

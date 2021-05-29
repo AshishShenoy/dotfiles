@@ -11,7 +11,7 @@ alias cp="rsync --verbose --archive --compress --progress "
 # Convenience aliases
 alias ll='ls -lh'
 alias la='ls -lah'
-alias lsd='ls -lah -d */'
+alias lsd='ls -d */'
 alias l.='ls -lah | egrep "^\."'
 alias free='free -m'
 alias df='df -h'
@@ -47,10 +47,11 @@ alias cpaste='xclip -selection clipboard -o'
 
 # Configuration Files
 alias virc='vim ~/.zshrc'
-alias vial='vim ~/.zsh_aliases'
+alias vial='vim ~/.config/shell/aliases.sh'
 alias vinv='vim ~/.config/nvim/init.vim'
 
 # Fun Ztuff
 alias rr='curl -s -L http://bit.ly/10hA8iC | bash'
 alias yoink='sudo pacman -S '
 alias yeet='sudo pacman -Rns '
+alias archbtw='ssh ashish@archbtw'

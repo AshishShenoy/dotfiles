@@ -107,39 +107,16 @@ shopt -s expand_aliases
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
-#
-# # ex - archive extractor
-# # usage: ex <file>
-ex ()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
 
 ##########		USER CONFIGURATION		##########
 
 # Since I only use bash from within VSCode, a special prompt.
 PS1='\[\033[01;32m\]\W\[\033[00m\] -> '
 
-# Expand the history size.
-export HISTFILESIZE=10000
-export HISTSIZE=500
 
-# Don't put duplicate lines in the history and do not add lines that start with a space
-export HISTCONTROL=erasedups:ignoredups:ignorespace
+export SHELL_CONFIG="/home/ashish/.config/shell"
+
+source $SHELL_CONFIG/aliases.sh
+source $SHELL_CONFIG/exports.sh
+source $SHELL_CONFIG/functions.sh
+
