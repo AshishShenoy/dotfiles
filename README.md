@@ -11,6 +11,7 @@ The programs whose dotfiles I'm currently tracking are:
 - git
 - mpv
 - neovim
+- rofi
 - sxhkd
 - vscode
 - zsh

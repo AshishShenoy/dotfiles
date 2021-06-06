@@ -20,6 +20,9 @@ super + t
 super + d
 	discord
 
+super + r
+        rofi -show drun
+
 super + m
 	rhythmbox
 
