@@ -24,6 +24,10 @@ function open () {
 	xdg-open $1 &> /dev/null
 }
 
+function take () {
+	mkdir -p $@ && cd ${@:$#}
+}
+
 # Returns current power consumption in watts
 function check-power () {
 	echo - | awk "{printf \"%.1f\", \

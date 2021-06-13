@@ -15,6 +15,8 @@ alias lsd='ls -d */'
 alias l.='ls -lah | egrep "^\."'
 alias free='free -m'
 alias df='df -h'
+alias ping='ping -c 5'
+alias wget='wget -c '
 
 # Package Management
 alias pacfind="paru -Slq | fzf -m --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk \"{print $2}\")' | xargs -ro paru -S"
@@ -27,10 +29,6 @@ alias pacman-sort-packages-by-size="LC_ALL=C pacman -Qi | awk '/^Name/{name=\$3}
 alias storage='pydf -h / /home /run/media/ashish/Acer /run/media/ashish/Data'
 alias camera='mpv --vf=hflip /dev/video0'
 
-# Development 
-alias pyserver='python3 -m http.server'
-alias mgd='mongod --dbpath=data --quiet --syslog --bind_ip=127.0.0.1 --port=27017 &'
-
 # Git aliases
 alias gs='git status'
 alias gl='git lg'
@@ -38,8 +36,6 @@ alias gl='git lg'
 # Network
 alias ip-nat='hostname -i'
 alias ip-public='curl -4 ifconfig.co'
-alias ping='ping -c 5'
-alias wget='wget -c '
 
 # Clipboard
 alias cclip='xclip -selection clipboard'
@@ -54,4 +50,4 @@ alias vinv='vim ~/.config/nvim/init.vim'
 alias rr='curl -s -L http://bit.ly/10hA8iC | bash'
 alias yoink='sudo pacman -S '
 alias yeet='sudo pacman -Rns '
-alias archbtw='ssh ashish@archbtw'
+alias atlas='ssh ashish@atlas'

@@ -17,6 +17,12 @@ super + e
 super + t
         source ~/.config/sxhkd/scripts/ocr.sh
 
+super + c
+        source ~/.config/sxhkd/scripts/placeholder.sh
+
+super + shift + Return
+        alacritty -e ssh ashish@atlas
+
 super + d
 	discord
 
