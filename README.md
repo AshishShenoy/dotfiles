@@ -8,6 +8,7 @@ The programs whose dotfiles I'm currently tracking are:
 
 - alacritty
 - bash
+- docker
 - git
 - mpv
 - neovim
