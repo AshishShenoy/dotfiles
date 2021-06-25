@@ -7,6 +7,7 @@ alias cat='bat '
 alias traceroute='mtr '
 alias vim='nvim '
 alias cp="rsync --verbose --archive --compress --progress "
+alias top="btm --color gruvbox"
 
 # Convenience aliases
 alias ll='ls -lh'
@@ -14,7 +15,6 @@ alias la='ls -lah'
 alias lsd='ls -d */'
 alias l.='ls -lah | egrep "^\."'
 alias free='free -m'
-alias df='df -h'
 alias ping='ping -c 5'
 alias wget='wget -c '
 
@@ -26,7 +26,6 @@ alias pacman-clean-cache='sudo pacman -Scc'
 alias pacman-sort-packages-by-size="LC_ALL=C pacman -Qi | awk '/^Name/{name=\$3} /^Installed Size/{print \$4\$5, name}' | sort -h"
 
 # System Resources 
-alias storage='pydf -h / /home /run/media/ashish/Acer /run/media/ashish/Data'
 alias camera='mpv --vf=hflip /dev/video0'
 
 # Git aliases
@@ -42,12 +41,11 @@ alias cclip='xclip -selection clipboard'
 alias cpaste='xclip -selection clipboard -o'
 
 # Configuration Files
-alias virc='vim ~/.zshrc'
-alias vial='vim ~/.config/shell/aliases.sh'
-alias vinv='vim ~/.config/nvim/init.vim'
+alias virc='vim ~/.dotfiles/zsh/.zshrc'
+alias vial='vim ~/.dotfiles/shell/.config/shell/aliases.sh'
+alias vinv='vim ~/.dotfiles/nvim/.config/nvim/init.vim'
 
 # Fun Ztuff
 alias rr='curl -s -L http://bit.ly/10hA8iC | bash'
 alias yoink='sudo pacman -S '
 alias yeet='sudo pacman -Rns '
-alias atlas='ssh ashish@atlas'

@@ -94,19 +94,6 @@ set noerrorbells visualbell t_vb=
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" => Indentation
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set equivalent number of spaces for a tab.
-set softtabstop=4
-
-" Automatically convert tabs to spaces.
-set expandtab
-
-" Number of spaces to be used for reindenting (<< and >>).
-set shiftwidth=4
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Other Shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Remaps of keybinds to move viewport up and down.
@@ -118,15 +105,39 @@ nnoremap <silent> <Leader>rv :source ~/.config/nvim/init.vim<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" => Other settings
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Change syntax highlighting of Bison files to C.
-au BufNewFile,BufRead,BufReadPost *.y set syntax=c
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Load plugins and their configurations.
 source ~/.config/nvim/plugins.vim
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Indentation and Folding
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set equivalent number of spaces for a tab.
+set softtabstop=4
+
+" Automatically convert tabs to spaces.
+set expandtab
+
+" Number of spaces to be used for reindenting (<< and >>).
+set shiftwidth=4
+
+" Fold using information from syntax highlighting.
+set foldmethod=indent
+
+" Fold only outer functions.
+set foldlevel=20
+
+noremap <silent> zz zA
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Other settings
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Change syntax highlighting by file extension.
+au BufNewFile,BufRead,BufReadPost *.y set syntax=c
+au BufNewFile,BufRead,BufReadPost *.js set syntax=javascriptreact
+au BufNewFile,BufRead,BufReadPost *.jsx set syntax=javascriptreact
+au BufNewFile,BufRead,BufReadPost *.ts set syntax=javascriptreact
+au BufNewFile,BufRead,BufReadPost *.tsx set syntax=javascriptreact

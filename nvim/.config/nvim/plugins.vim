@@ -7,14 +7,12 @@ call plug#begin('~/.local/share/nvim/plugged')
         " Nodejs extension host for Vim & Neovim.
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-        " Fuzzy file finder for Vim.
-        Plug 'ctrlpvim/ctrlp.vim'
-
         " Expand emmet abbreviations.
         Plug 'mattn/emmet-vim'
 
-        " A bright theme with pastel 'retro groove' colors and light/dark mode switching.
-        Plug 'morhetz/gruvbox'
+        " Fuzzy finder for vim.
+        Plug 'junegunn/fzf'
+        Plug 'junegunn/fzf.vim'
 
 	" A light and configurable statusline/tabline plugin for Vim.
 	Plug 'itchyny/lightline.vim'
@@ -22,17 +20,8 @@ call plug#begin('~/.local/share/nvim/plugged')
         " Comment functions so powerful—no comment necessary.
         Plug 'preservim/nerdcommenter'
 
-	" The NERDTree is a file system explorer for the Vim editor.
-	Plug 'preservim/nerdtree'
-
-        " A plugin of NERDTree showing git status.
-        Plug 'xuyuanp/nerdtree-git-plugin'
-
         " Vivid and high contrast colorscheme based on Monokai Pro.
         Plug 'sainnhe/sonokai'
-
-        " Adds file type icons to Vim plugins.
-        Plug 'ryanoasis/vim-devicons'
         
         " A Git wrapper so awesome, it should be illegal.
         Plug 'tpope/vim-fugitive'
@@ -46,11 +35,11 @@ call plug#begin('~/.local/share/nvim/plugged')
         " The React syntax highlighting and indenting plugin for vim.
         Plug 'maxmellon/vim-jsx-pretty'
 
-        " Extra syntax and highlight for NERDTree files.
-        Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
 	" A fork of Rainbow Parentheses Improved by luo chen. 
 	Plug 'frazrepo/vim-rainbow'
+
+        " Changes pwd to project root upon opening a file.
+        Plug 'airblade/vim-rooter'
 
 call plug#end()
 
@@ -225,12 +214,34 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" => FZF
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Controls the buffer into which the new file will be opened.
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
 
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" => CTRLP
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set working directory of the directory of the current file.
-let g:ctrlp_working_path_mode = 'ca'
+" Border color
+let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
+
+let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
+let $FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git --exclude node_modules --exclude venv"
+
+" Get Files
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
+
+" Get text in files with Rg
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg -g "!.git" -g "!node_modules" -g "!venv" --column --line-number --no-heading --color=always --smart-case --hidden '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+map <leader>f :Files<CR>
+nnoremap <leader>g :Rg<CR>
+nnoremap <leader>m :Marks<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -255,30 +266,6 @@ let g:NERDSpaceDelims = 1
 
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 1
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NERDTREE
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set symbols for closed and open folders.
-let g:NERDTreeDirArrowExpandable = '►'
-let g:NERDTreeDirArrowCollapsible = '▼'
-
-"" Shortcut to toggle NERDTree.
-nnoremap <silent> <C-n> :NERDTreeToggle<CR>
-
-" Ignore list for NERDTree.
-let NERDTreeIgnore=['^.git$', '^node_modules$']
-
-" Show hidden files.
-let NERDTreeShowHidden = 1
-
-" Disable the help text.
-let NERDTreeMinimalUI = 1
-
-" Set size of the sidebar in columns.
-let g:NERDTreeWinSize = 30
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM-GITGUTTER
