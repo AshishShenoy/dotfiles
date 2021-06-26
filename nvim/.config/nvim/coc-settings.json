@@ -7,8 +7,12 @@
     "typescriptreact",
     "html",
     "json",
-    "python"
+    "yaml",
+    "python",
+    "css",
+    "markdown"
   ],
 
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "python.linting.enabled": true
 }
