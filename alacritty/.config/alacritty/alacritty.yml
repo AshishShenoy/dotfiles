@@ -18,8 +18,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-   x: 5
-   y: 5
+    x: 5
+    y: 5
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
@@ -41,10 +41,10 @@ window:
 
   # Window class (Linux/BSD only):
   #class:
-    # Application instance name
-    #instance: Alacritty
-    # General application class
-    #general: Alacritty
+  # Application instance name
+  #instance: Alacritty
+  # General application class
+  #general: Alacritty
 
   # GTK theme variant (Linux/BSD only)
   #
@@ -120,20 +120,20 @@ draw_bold_text_with_bright_colors: false
 
 colors:
   primary:
-    background: '0x161925'
-    foreground: '0xC3C7D1'
+    background: "#161925"
+    foreground: "#C3C7D1"
   cursor:
-    text: '0x2E3440'
-    cursor: '0xD8DEE9'
+    text: "#2E3440"
+    cursor: "#D8DEE9"
   normal:
-    black: '0x282C34'
-    red: '0xED254E'
-    green: '0x71F79F'
-    yellow: '0xF9DC5C'
-    blue: '0x7CB7FF'
-    magenta: '0xC74DED'
-    cyan: '0x00C1E4'
-    white: '0xDCDFE4'
+    black: "#282C34"
+    red: "#ED254E"
+    green: "#71F79F"
+    yellow: "#F9DC5C"
+    blue: "#7CB7FF"
+    magenta: "#C74DED"
+    cyan: "#00C1E4"
+    white: "#DCDFE4"
 
 # Background opacity
 #
@@ -142,10 +142,10 @@ colors:
 background_opacity: 0.98
 
 #selection:
-  #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+#semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
-  # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+# When set to `true`, selected text will be copied to the primary clipboard.
+#save_to_clipboard: false
 
 cursor:
   # Cursor style
@@ -192,27 +192,26 @@ mouse:
   hide_when_typing: true
 
   #url:
-    # URL launcher
-    #
-    # This program is executed when clicking on a text which is recognized as a URL.
-    # The URL is always added to the command as the last parameter.
-    #
-    # When set to `None`, URL launching will be disabled completely.
-    #
-    # Default:
-    #   - (macOS) open
-    #   - (Linux/BSD) xdg-open
-    #   - (Windows) explorer
-    #launcher:
-    #  program: xdg-open
-    #  args: []
+  # URL launcher
+  #
+  # This program is executed when clicking on a text which is recognized as a URL.
+  # The URL is always added to the command as the last parameter.
+  #
+  # When set to `None`, URL launching will be disabled completely.
+  #
+  # Default:
+  #   - (macOS) open
+  #   - (Linux/BSD) xdg-open
+  #   - (Windows) explorer
+  #launcher:
+  #  program: xdg-open
+  #  args: []
 
-    # URL modifiers
-    #
-    # These are the modifiers that need to be held down for opening URLs when clicking
-    # on them. The available modifiers are documented in the key binding section.
-    #modifiers: None
-
+  # URL modifiers
+  #
+  # These are the modifiers that need to be held down for opening URLs when clicking
+  # on them. The available modifiers are documented in the key binding section.
+  #modifiers: None
 # Mouse bindings
 #
 # Mouse bindings are specified as a list of objects, much like the key

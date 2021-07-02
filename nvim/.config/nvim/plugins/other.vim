@@ -13,6 +13,6 @@ highlight SignColumn ctermbg=NONE
 " Enable vim-rainbow for certain filetypes.
 au FileType c,cpp,javascript,typescript,python call rainbow#load()
 
-" Disable  pair rearranging on CR.
+" Disable pair rearranging on CR.
 let g:AutoPairsMapCR=0
 

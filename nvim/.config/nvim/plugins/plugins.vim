@@ -12,9 +12,6 @@ call plug#begin('~/.local/share/nvim/plugged')
         " Insert or delete brackets, parens, quotes in pair.
         Plug 'jiangmiao/auto-pairs'
 
-        " Black is the uncompromising Python code formatter.
-        Plug 'psf/black'
-
         " Nodejs extension host for Vim & Neovim.
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -30,6 +27,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 
         " Comment functions so powerful—no comment necessary.
         Plug 'preservim/nerdcommenter'
+
+        " A high-performance color highlighter for Neovim.
+        Plug 'norcalli/nvim-colorizer.lua'
 
         " A Git wrapper so awesome, it should be illegal.
         Plug 'tpope/vim-fugitive'
@@ -49,8 +49,10 @@ call plug#begin('~/.local/share/nvim/plugged')
         " Changes pwd to project root upon opening a file.
         Plug 'airblade/vim-rooter'
 
+        " Jump to any location specified by two characters. 
+        Plug 'justinmk/vim-sneak' 
+
         " Themes
-        Plug 'sainnhe/sonokai'
         Plug 'joshdick/onedark.vim'
 
 call plug#end()

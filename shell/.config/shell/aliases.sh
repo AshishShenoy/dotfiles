@@ -1,13 +1,10 @@
-# Allows other aliases to be sudo'd.
-alias sudo='sudo '
-
 # Replacements and aliases for built-in programs
 alias ls='exa --group-directories-first '
 alias cat='bat '
 alias traceroute='mtr '
 alias vim='nvim '
-alias cp="rsync --verbose --archive --compress --progress "
-alias top="btm --color gruvbox"
+alias cp='rsync --verbose --archive --compress --progress '
+alias top='btm '
 
 # Convenience aliases
 alias ll='ls -lh'
@@ -20,10 +17,10 @@ alias wget='wget -c '
 
 # Package Management
 alias pacfind="paru -Slq | fzf -m --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk \"{print $2}\")' | xargs -ro paru -S"
-alias pacrem="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
-alias pacman-autoremove='sudo pacman -Rns $(pacman -Qdtq)'
-alias pacman-clean-cache='sudo pacman -Scc'
-alias pacman-sort-packages-by-size="LC_ALL=C pacman -Qi | awk '/^Name/{name=\$3} /^Installed Size/{print \$4\$5, name}' | sort -h"
+alias pacrem="paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns"
+alias pacautorem='paru -Rns $(paru -Qdtq)'
+alias pacclean='paru -Scc'
+alias pacsort="paru -Qi | awk '/^Name/{name=\$3} /^Installed Size/{print \$4\$5, name}' | sort -h"
 
 # System Resources 
 alias camera='mpv --vf=hflip /dev/video0'

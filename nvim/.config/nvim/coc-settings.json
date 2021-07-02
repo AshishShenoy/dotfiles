@@ -13,6 +13,21 @@
     "markdown"
   ],
 
+  // javascript / typescript
   "eslint.autoFixOnSave": true,
-  "python.linting.enabled": true
+
+  // python
+  "python.linting.enabled": true,
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "~/.local/bin/black",
+
+  // coc-explorer
+  "explorer.width": 35,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.file.showHiddenFiles": true,
+  "explorer.keyMappings.global": {
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit"
+  }
 }
