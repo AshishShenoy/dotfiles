@@ -1,0 +1,38 @@
+[user]
+	name = Ashish Shenoy
+	email = ashish1shenoy@gmail.com
+	signingkey = EA94508DB52A29918FBDA8B0A3FE30989B18789E
+[color]
+	# Enable colors in color-supporting terminals
+	ui = auto
+[alias]
+	# Done this way as git aliases don't support multiple commands
+	# And doesn't add a newline at the end of the last log fstring
+	# So the echo command which prints a newline by default is used.
+	lg = "!lg() { \
+		git log --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d%Creset' --abbrev-commit; \
+		echo ''; \
+		}; lg"
+
+    # Unstage a file using 'git unstage file'.
+	unstage = reset HEAD --
+
+    # View the last commit.
+	last = log -1 HEAD
+
+[pager]
+	log = false
+[credential]
+	helper = store
+[init]
+	defaultBranch = master
+[diff]
+	tool = nvimdiff
+[core]
+	editor = nvim
+[pull]
+	rebase = false
+[gpg]
+	program = gpg2
+[commit]
+	gpgsign = true

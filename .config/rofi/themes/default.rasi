@@ -1,0 +1,44 @@
+* {
+  background-color: #282c34;
+  border-color: #282c34;
+  text-color: #bbc2cf;
+  height: 25px;
+  font: "SauceCodePro Nerd Font Mono 11";
+}
+window {
+  anchor: north;
+  location: north;
+  width: 100%;
+  padding: 0px;
+  children: [ horibox ];
+}
+horibox {
+  orientation: horizontal;
+  children: [ prompt, entry, listview ];
+}
+prompt {
+  padding: 2px;
+  background-color: #51afef;
+  text-color: #282c34;
+  font: "SauceCodePro Nerd Font Bold 12";
+}
+entry {
+  padding: 2px;
+  expand: false;
+  width: 10em;
+}
+listview {
+  layout: horizontal;
+  lines: 100;
+}
+element {
+  padding: 2px 10px;
+}
+element selected {
+  background-color: #ae3f3e;
+  text-color: #ffffff;
+}
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+}
