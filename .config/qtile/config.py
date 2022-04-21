@@ -170,8 +170,8 @@ for i, group in enumerate(groups, 1):
 layouts = [
     layout.MonadTall(
         **{
-            "border_width": 2,
-            "margin": 20,
+            "border_width": 1,
+            "margin": 10,
             "border_focus": COLORS["green"],
             "single_border_width": 0,
         }

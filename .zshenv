@@ -33,4 +33,6 @@ export OPENER="xdg-open"
 export PAGER="less"
 export WM="qtile"
 
+# Other
 export ARCHFLAGS="-arch x86_64"
+export GPG_TTY=$(tty)

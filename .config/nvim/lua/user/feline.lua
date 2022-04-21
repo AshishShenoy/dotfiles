@@ -4,6 +4,6 @@ if not status_ok then
 end
 
 feline.setup({
-  components = require('catppuccin.core.integrations.feline'),
+  -- components = require('catppuccin.core.integrations.feline'),
 })
 

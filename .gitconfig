@@ -31,7 +31,7 @@
 [core]
 	editor = nvim
 [pull]
-	rebase = false
+	rebase = true
 [gpg]
 	program = gpg2
 [commit]
