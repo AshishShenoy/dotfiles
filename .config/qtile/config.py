@@ -8,6 +8,7 @@ from libqtile.lazy import lazy
 MOD = "mod4"
 TERMINAL = "alacritty"
 EDITOR = "nvim"
+BROWSER = "firefox"
 HOME = os.path.expanduser("~")
 SCRIPTS_DIR = f"{HOME}/.config/shell/scripts"
 
@@ -25,23 +26,23 @@ COLORS = {
 POWERLINE_SYMBOL = "\ue0be"
 
 keys = [
-    ###
-    ### Switch focus between windows in a workspace
-    ###
+    #
+    # Switch focus between windows in a workspace
+    #
     Key([MOD], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([MOD], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([MOD], "j", lazy.layout.down(), desc="Move focus down"),
     Key([MOD], "k", lazy.layout.up(), desc="Move focus up"),
-    ###
-    ### Move the focused window within a workspace
-    ###
+    #
+    # Move the focused window within a workspace
+    #
     Key([MOD, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window left"),
     Key([MOD, "shift"], "l", lazy.layout.shuffle_right(), desc="Move window right"),
     Key([MOD, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([MOD, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
-    ###
-    ### Manage window sizes
-    ###
+    #
+    # Manage window sizes
+    #
     Key([MOD, "control"], "h", lazy.layout.shrink(), desc="Shrink window"),
     Key([MOD, "control"], "l", lazy.layout.grow(), desc="Grow window"),
     Key(
@@ -56,9 +57,9 @@ keys = [
         lazy.window.toggle_floating(),
         desc="Toggle Floating mode for window",
     ),
-    ###
-    ### Hotkeys
-    ###
+    #
+    # Hotkeys
+    #
     Key([MOD], "Return", lazy.spawn(TERMINAL), desc="Launch terminal"),
     Key(
         [MOD, "shift"],
@@ -66,8 +67,7 @@ keys = [
         lazy.spawn(f"{TERMINAL} -e ssh ashish@atlas"),
         desc="Launch ssh session to home server.",
     ),
-    Key([MOD], "b", lazy.spawn("firefox"), desc="Launch browser"),
-    Key([MOD], "v", lazy.spawn("code"), desc="Launch VSCode"),
+    Key([MOD], "b", lazy.spawn(BROWSER), desc="Launch browser"),
     Key([MOD], "d", lazy.spawn("discord"), desc="Launch Discord"),
     Key([MOD], "r", lazy.spawn("rofi -show drun"), desc="Launch rofi"),
     Key(
@@ -79,9 +79,9 @@ keys = [
     Key([MOD], "s", lazy.spawn("spotify"), desc="Launch Spotify"),
     Key([MOD], "f", lazy.spawn("flameshot gui"), desc="Launch screenshot tool"),
     Key([MOD], "n", lazy.spawn("pkill -USR1 redshift"), desc="Toggle night light"),
-    ###
-    ### Hotkeys to scripts
-    ###
+    #
+    # Hotkeys to scripts
+    #
     Key(
         [MOD],
         "t",
@@ -94,9 +94,9 @@ keys = [
         lazy.spawn(f"bash {SCRIPTS_DIR}/placeholder.sh"),
         desc="Place text in clipboard",
     ),
-    ###
-    ### Multimedia Keys
-    ###
+    #
+    # Multimedia Keys
+    #
     Key([], "XF86AudioNext", lazy.spawn("playerctl next")),
     Key([], "XF86AudioPrev", lazy.spawn("playerctl previous")),
     Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
@@ -105,23 +105,17 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 -q set Master '10%-'")),
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set 10%+")),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
-    ###
-    ### Manage Qtile
-    ###
+    #
+    # Manage Qtile
+    #
     Key([MOD], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([MOD], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([MOD, "shift"], "r", lazy.restart(), desc="Restart Qtile"),
     Key([MOD, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key(["control", "shift"], "l", lazy.spawn("slock"), desc="Lock screen"),
-    Key(
-        [MOD, "shift"],
-        "c",
-        lazy.spawn(f"{TERMINAL} -e {EDITOR} {HOME}/.config/qtile/config.py"),
-        desc="Edit Qtile configuration",
-    ),
-    ###
-    ### Switch monitor focus
-    ###
+    #
+    # Switch monitor focus
+    #
     Key([MOD], "period", lazy.next_screen(), desc="Move focus to next monitor"),
     Key([MOD], "comma", lazy.prev_screen(), desc="Move focus to previous monitor"),
 ]
@@ -130,13 +124,13 @@ keys = [
 groups = [
     Group(name, **kwargs)
     for name, kwargs in [
-        ("WEB", {"matches": [Match(wm_class=["firefox"])]}),
+        ("WEB", {"matches": [Match(wm_class=[BROWSER])]}),
         ("DEV1", {}),
-        ("DEV2", {}),
-        ("WORK", {}),
-        ("SYS", {}),
+        ("DEV@", {}),
+        ("READ", {}),
         ("VM", {}),
-        ("RAND", {}),
+        ("RAND1", {}),
+        ("RAND2", {}),
         ("MUS", {"matches": [Match(wm_class=["spotify"])]}),
         ("VID", {"matches": [Match(wm_class=["mpv"])]}),
         ("DISC", {"matches": [Match(wm_class=["discord"])]}),
@@ -146,18 +140,18 @@ groups = [
 for i, group in enumerate(groups, 1):
     keys.extend(
         [
-            ###
-            ### Switch between workspaces
-            ###
+            #
+            # Switch between workspaces
+            #
             Key(
                 [MOD],
                 str(i if i != 10 else 0),
                 lazy.group[group.name].toscreen(toggle=False),
                 desc=f"Switch to group {group.name}",
             ),
-            ###
-            ### Move focused window to workspace
-            ###
+            #
+            # Move focused window to workspace
+            #
             Key(
                 [MOD, "shift"],
                 str(i if i != 10 else 0),
@@ -293,9 +287,9 @@ def init_screens():
 screens = init_screens()
 
 mouse = [
-    ###
-    ### Use mouse only for floating mode.
-    ###
+    #
+    # Use mouse only for floating mode.
+    #
     Drag(
         [MOD],
         "Button1",

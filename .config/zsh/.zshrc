@@ -93,10 +93,8 @@ wd() {
     source /usr/share/wd/wd.sh
 }
 
-# NVM stuff
-source /usr/share/nvm/nvm.sh
-source /usr/share/nvm/bash_completion
-source /usr/share/nvm/install-nvm-exec
+# fnm setup
+eval "$(fnm env --use-on-cd)"
 
 # Dotfiles managaement stuff
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no

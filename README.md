@@ -17,6 +17,7 @@ The programs whose dotfiles I'm currently tracking are:
 - git
 - mpv
 - neovim
+- neofetch
 - picom
 - qtile
 - rofi

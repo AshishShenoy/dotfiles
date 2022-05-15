@@ -2,6 +2,7 @@
 export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
 export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
+export XDG_STATE_HOME=${XDG_STATE_HOME:="$HOME/.local/state"}
 
 # Disable files
 export LESSHISTFILE=-
@@ -19,6 +20,12 @@ export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 export WD_CONFIG=$XDG_CONFIG_HOME/.warprc
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export NVM_DIR="$XDG_DATA_HOME"/nvm
+export ANSIBLE_HOME="$XDG_DATA_HOME"/ansible
+export VAGRANT_HOME="$XDG_DATA_HOME"/vagrant
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 
 # Default programs
 export EDITOR="nvim"
