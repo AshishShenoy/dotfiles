@@ -4,6 +4,10 @@ export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 export XDG_STATE_HOME=${XDG_STATE_HOME:="$HOME/.local/state"}
 
+# PATH
+export PATH="$XDG_DATA_HOME/go/bin:$PATH"
+export PATH="$XDG_DATA_HOME/npm/bin:$PATH"
+
 # Disable files
 export LESSHISTFILE=-
 
@@ -26,6 +30,7 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export PSQL_HISTORY="$XDG_DATA_HOME"/psql_history
 
 # Default programs
 export EDITOR="nvim"

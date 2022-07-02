@@ -2,9 +2,28 @@
 	name = Ashish Shenoy
 	email = ashish1shenoy@gmail.com
 	signingkey = EA94508DB52A29918FBDA8B0A3FE30989B18789E
+
+[core]
+    pager = delta
+	editor = nvim
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    light = false    # set to true if you're in a terminal w/ a light background color
+    line-numbers = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
 [color]
-	# Enable colors in color-supporting terminals
 	ui = auto
+
 [alias]
 	# Done this way as git aliases don't support multiple commands
 	# And doesn't add a newline at the end of the last log fstring
@@ -13,26 +32,26 @@
 		git log --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d%Creset' --abbrev-commit; \
 		echo ''; \
 		}; lg"
-
     # Unstage a file using 'git unstage file'.
 	unstage = reset HEAD --
-
     # View the last commit.
 	last = log -1 HEAD
 
 [pager]
 	log = false
+
 [credential]
 	helper = store
+
 [init]
 	defaultBranch = master
-[diff]
-	tool = nvimdiff
-[core]
-	editor = nvim
+
 [pull]
 	rebase = true
+
 [gpg]
 	program = gpg2
+
 [commit]
 	gpgsign = true
+
