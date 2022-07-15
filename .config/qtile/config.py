@@ -341,4 +341,4 @@ def start_once():
     subprocess.call([f"{HOME}/.config/qtile/autostart.sh"])
 
 
-wmname = "Qtile"
+wmname = "LG3D"
