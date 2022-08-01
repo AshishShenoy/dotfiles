@@ -7,6 +7,7 @@ export XDG_STATE_HOME=${XDG_STATE_HOME:="$HOME/.local/state"}
 # PATH
 export PATH="$XDG_DATA_HOME/go/bin:$PATH"
 export PATH="$XDG_DATA_HOME/npm/bin:$PATH"
+export PATH="$XDG_DATA_HOME/pnpm:$PATH"
 
 # Disable files
 export LESSHISTFILE=-
@@ -31,11 +32,13 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export PSQL_HISTORY="$XDG_DATA_HOME"/psql_history
+export PNPM_HOME="$XDG_DATA_HOME"/pnpm
+export ANDROID_HOME="$XDG_DATA_HOME"/android
 
 # Default programs
-export EDITOR="nvim"
+export EDITOR="zsh -ic 'neovide --multigrid'"
 export READER="evince"
-export VISUAL="nvim"
+export VISUAL="zsh -ic 'neovide --multigrid'"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
 export VIDEO="mpv"

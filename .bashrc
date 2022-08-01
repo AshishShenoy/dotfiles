@@ -110,7 +110,7 @@ shopt -s histappend
 
 ##########		USER CONFIGURATION		##########
 # History Configuration
-export HISTFILE=$HOME/.bash_history
+export HISTFILE="$XDG_DATA_HOME"/bash/history
 export HISTSIZE=10000
 export HISTFILESIZE=10000
 

@@ -1,16 +1,19 @@
 import os
 import subprocess
-from libqtile import bar, layout, widget, hook
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile import bar, widget
 from libqtile.lazy import lazy
+from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile.layout.xmonad import MonadTall
+from libqtile.layout.floating import Floating
 
 
 MOD = "mod4"
 TERMINAL = "alacritty"
-EDITOR = "nvim"
 BROWSER = "firefox"
 HOME = os.path.expanduser("~")
 SCRIPTS_DIR = f"{HOME}/.config/shell/scripts"
+# Interactive zsh shell to inherit $PATH and other envvars from zsh
+EDITOR = "zsh -ic 'neovide --multigrid'"
 
 COLORS = {
     "black": "#161925",
@@ -67,6 +70,7 @@ keys = [
         lazy.spawn(f"{TERMINAL} -e ssh ashish@atlas"),
         desc="Launch ssh session to home server.",
     ),
+    Key([MOD], "v", lazy.spawn(EDITOR), desc="Launch editor"),
     Key([MOD], "b", lazy.spawn(BROWSER), desc="Launch browser"),
     Key([MOD], "d", lazy.spawn("discord"), desc="Launch Discord"),
     Key([MOD], "r", lazy.spawn("rofi -show drun"), desc="Launch rofi"),
@@ -120,7 +124,6 @@ keys = [
     Key([MOD], "comma", lazy.prev_screen(), desc="Move focus to previous monitor"),
 ]
 
-#  groups = [Group(i) for i in "1234567890"]
 groups = [
     Group(name, **kwargs)
     for name, kwargs in [
@@ -162,7 +165,7 @@ for i, group in enumerate(groups, 1):
     )
 
 layouts = [
-    layout.MonadTall(
+    MonadTall(
         **{
             "border_width": 1,
             "margin": 10,
@@ -312,9 +315,9 @@ bring_front_click = False
 cursor_warp = False
 
 # Determine which class of windows should be in floating mode.
-floating_layout = layout.Floating(
+floating_layout = Floating(
     float_rules=[
-        *layout.Floating.default_float_rules,
+        *Floating.default_float_rules,
         Match(wm_class="confirmreset"),
         Match(wm_class="makebranch"),
         Match(wm_class="maketag"),
@@ -335,10 +338,6 @@ focus_on_window_activation = "smart"
 
 reconfigure_screens = True
 
-
-@hook.subscribe.startup_once
-def start_once():
-    subprocess.call([f"{HOME}/.config/qtile/autostart.sh"])
-
-
+# For some reason JetBrains IDEs needs this
+# An hour of my life I won't get back
 wmname = "LG3D"
