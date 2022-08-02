@@ -21,7 +21,6 @@ The programs whose dotfiles I'm currently tracking are:
 - picom
 - qtile
 - rofi
-- vscode
 - zsh
 
 I'm currently using a [Git bare repository](https://www.atlassian.com/git/tutorials/dotfiles) to manage my dotfiles.
@@ -30,6 +29,5 @@ I've used [GNU Stow](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-t
 
 ## Credits
 
-- Thanks to [Christian Chiarulli](https://www.chrisatmachine.com/) for his excellent [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch) repo, which got me to transition to a lua config.
+- Thanks to [Christian Chiarulli](https://www.chrisatmachine.com/) for his excellent [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch) repo, which got me to transition to a lua config, and also for his [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide).
 - Thanks to [Derek Taylor aka DistroTube](https://distro.tube/) for the qtile and rofi configs.
-
