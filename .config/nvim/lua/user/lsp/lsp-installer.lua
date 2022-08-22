@@ -7,9 +7,12 @@ local lspconfig = require 'lspconfig'
 
 local servers = {
 	'sumneko_lua',
+	'tailwindcss',
 	'cssls',
+	'emmet_ls',
 	'html',
 	'tsserver',
+	'eslint',
 	'pyright',
 	'bashls',
 	'jsonls',

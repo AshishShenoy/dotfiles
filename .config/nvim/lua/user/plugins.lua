@@ -67,6 +67,7 @@ return packer.startup(function(use)
 	use { 'williamboman/nvim-lsp-installer', commit = 'e9f13d7acaa60aff91c58b923002228668c8c9e6' } -- simple to use language server installer
 	use { 'jose-elias-alvarez/null-ls.nvim', commit = 'ff40739e5be6581899b43385997e39eecdbf9465' } -- for formatters and linters
 	use { 'RRethy/vim-illuminate', commit = 'c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5' } -- hightlight instances of symbols when cursor is over it
+	use { 'b0o/schemastore.nvim' } -- No need to commit lock this one, only updates schemestore
 
 	-- Telescope
 	use { 'nvim-telescope/telescope.nvim', commit = 'd96eaa914aab6cfc4adccb34af421bdd496468b0' }
@@ -86,6 +87,7 @@ return packer.startup(function(use)
 	use { 'feline-nvim/feline.nvim', commit = '2962c8c4a67f41ef35c58aa367ff2afb7a9691d3' }
 	use { 'folke/which-key.nvim', commit = 'bd4411a2ed4dd8bb69c125e339d837028a6eea71' }
 	use { 'norcalli/nvim-colorizer.lua', commit = '36c610a9717cc9ec426a07c8e6bf3b3abcb139d6' }
+	use { 'kylechui/nvim-surround', commit = 'a06dea11e7fdcf338776fa51fa5277163ffb048d' }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

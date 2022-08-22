@@ -16,6 +16,7 @@ end
 dap_install.setup {}
 
 dap_install.config('python', {})
+dap_install.config('chrome', {})
 -- add other configs here
 
 dapui.setup {

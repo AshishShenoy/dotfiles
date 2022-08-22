@@ -17,5 +17,6 @@ null_ls.setup {
 			extra_args = { '--call-parentheses=None', '--column-width=120', '--quote-style=ForceSingle' },
 		},
 		diagnostics.flake8,
+		diagnostics.eslint,
 	},
 }
