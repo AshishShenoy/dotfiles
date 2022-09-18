@@ -14,8 +14,7 @@ autoload -Uz compinit && compinit
 bindkey -e 
 
 # Setup Spaceship Prompt and options
-autoload -U promptinit && promptinit
-prompt spaceship
+source /usr/lib/spaceship-prompt/spaceship.zsh
 
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
