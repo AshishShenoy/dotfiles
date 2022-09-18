@@ -73,7 +73,8 @@ keys = [
     Key([MOD], "v", lazy.spawn(EDITOR), desc="Launch editor"),
     Key([MOD], "b", lazy.spawn(BROWSER), desc="Launch browser"),
     Key([MOD], "d", lazy.spawn("discord"), desc="Launch Discord"),
-    Key([MOD], "r", lazy.spawn("rofi -show drun"), desc="Launch rofi"),
+    Key([MOD], "r", lazy.spawn(f"bash {HOME}/.config/rofi/scripts/launcher_t1"), desc="Launch rofi"),
+    Key([MOD], "x", lazy.spawn(f"bash {HOME}/.config/rofi/scripts/powermenu_t2"), desc="Launch rofi"),
     Key(
         [MOD],
         "m",
