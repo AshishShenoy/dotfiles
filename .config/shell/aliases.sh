@@ -33,6 +33,7 @@ alias pacsort="paru -Qi | awk '/^Name/{name=\$3} /^Installed Size/{print \$4\$5,
 
 # Dotfiles Management
 alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias lazydot='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Aliases for BSD style CLIs
 alias gs='git status'
