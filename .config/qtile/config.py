@@ -13,7 +13,8 @@ BROWSER = "firefox"
 HOME = os.path.expanduser("~")
 SCRIPTS_DIR = f"{HOME}/.config/shell/scripts"
 # Interactive zsh shell to inherit $PATH and other envvars from zsh
-EDITOR = "zsh -ic 'neovide --multigrid'"
+# EDITOR = "zsh -ic 'neovide --multigrid'"
+EDITOR = "code"
 
 COLORS = {
     "black": "#161925",
