@@ -36,9 +36,9 @@ export PNPM_HOME="$XDG_DATA_HOME"/pnpm
 export ANDROID_HOME="$XDG_DATA_HOME"/android
 
 # Default programs
-export EDITOR="zsh -ic 'neovide --multigrid'"
+export EDITOR="vim"
 export READER="evince"
-export VISUAL="zsh -ic 'neovide --multigrid'"
+export VISUAL="code"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
 export VIDEO="mpv"
