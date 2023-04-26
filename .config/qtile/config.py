@@ -226,7 +226,7 @@ def init_widgets():
             fontsize=25,
         ),
         widget.Backlight(
-            backlight_name="intel_backlight",
+            backlight_name="nvidia_wmi_ec_backlight",
             brightness_file="actual_brightness",
             fmt="BLT: {}",
             background=COLORS["green"],
