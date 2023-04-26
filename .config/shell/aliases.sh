@@ -8,6 +8,7 @@ alias traceroute='mtr '
 alias cp='rsync --verbose --archive --compress --progress '
 alias top='btm -r 2000'
 alias wget='wget -c --hsts-file="$XDG_DATA_HOME/wget-hsts"'
+alias http='xh '
 
 # Convenience aliases
 alias ll='ls -lh'
