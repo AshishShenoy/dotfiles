@@ -48,6 +48,7 @@ alias cclip='xclip -selection clipboard'
 alias cpaste='xclip -selection clipboard -o'
 alias ip-public='curl -s -4 ifconfig.co'
 alias pg='ping google.com'
+alias pd='ping dashboard.atlas'
 
 # Configuration Files
 alias virc='vim ~/.config/zsh/.zshrc'
