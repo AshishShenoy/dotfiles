@@ -36,7 +36,7 @@ export PNPM_HOME="$XDG_DATA_HOME"/pnpm
 export ANDROID_HOME="$XDG_DATA_HOME"/android
 
 # Default programs
-export EDITOR="vim"
+export EDITOR="nvim"
 export READER="evince"
 export VISUAL="code"
 export TERMINAL="alacritty"
